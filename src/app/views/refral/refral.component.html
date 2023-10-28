@@ -1,0 +1,18 @@
+<p>refral works!</p>
+
+<div>
+    <br><br><br>
+    <input type="text"  size="50" class="gymForm" placeholder="Refral Name" [(ngModel)]="name" >
+    <br>
+    <input type="text"  size="50" class="gymForm" placeholder="Refral PhoneNo/Email" [(ngModel)]="phoneno" >
+    <br>
+    <button (click)="refer()" value="Refer">Refer</button>
+    <br><br>
+    <div *ngIf="yourCode!=''">Your refral code is : {{yourCode}}</div>
+    <div *ngIf="friendsCode!=''">Friends refral code is : {{friendsCode}}</div>
+  
+    </div>
+
+
+
+

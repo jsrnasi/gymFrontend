@@ -1,0 +1,32 @@
+.rating-list {
+    li {
+    font-size: 30px;
+        float: right;
+        color: #ddd;
+        &:hover {
+            color: #e5ba03;
+            ~ {
+                li {
+                    color: #e5ba03;
+                }
+            }
+        }
+    }
+    li.selected {
+        color: #e5ba03;
+    }
+    display: inline-block;
+    list-style: none;
+}
+
+
+#submit{
+    background-color: #e5ba03; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

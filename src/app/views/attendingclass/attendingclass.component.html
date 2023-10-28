@@ -1,0 +1,49 @@
+<p>attendingclass works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Gym Id</th>
+            <th>Gym Name</th>
+            <th>Attend Id</th>
+            <th>Attend Start Time</th>
+            <th>Status</th>
+            <th>Slot Expirey Time</th>
+            <th>Slot Id</th>
+            <th>Slots</th>
+            <th>Slots Use Months</th>
+            <th>Slots Used</th>
+            <th>Slots Left</th>
+            <th>ACtion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let slot of attendingData.gymSlotPurchaseResList">
+            <th>{{ slot.customerId }}</th>
+            <td> </td>
+            <td>{{ slot.gymId }}</td>
+            <td> </td>
+            <td>{{ slot.attendId }} </td>
+            <td>{{ slot.attendStartTime * 1000 | date }} </td>
+            <td> <span *ngIf="slot.attendingStatus == 1 && currentTime <= slot.slotExpiryTime * 1000 ">Class Booked</span> <span *ngIf="slot.attendingStatus == 1 && currentTime > slot.slotExpiryTime * 1000 ">Class Expired</span><span *ngIf="slot.attendingStatus == 2 ">Attended Gym</span>   </td>
+            <td>{{ slot.slotExpiryTime * 1000 | date }} </td>
+            <td>{{ slot.slotId }}</td>
+            <td>{{ slot.slots }}</td>
+            <td>{{ slot.slotsNoOfMonths }}</td>
+            <td>{{ slot.slotsUsed }}</td>
+            <td>{{ slot.slots -  slot.slotsUsed }}</td>
+            <td>
+                <button (click)="markAttendance(slot.attendId)" value="Scan">Scan</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+<main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page2.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content content-style2">
+              <h2 class="title"><span>OUR </span>PRODUCTS</h2>
+              <div class="desc">
+                <p class="ml-0">We have very professional and exprt Instructor and they can very important to maintain<br>our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
+
+    <!--== Start Shop Area Wrapper ==-->
+    <section class="product-area product-grid-area">
+      <div class="container">
+        <div class="row"  >
+          <div class="col-md-12 col-lg-9 order-0 order-lg-1">
+            <div class="product-content-area">
+              <div class="row" >
+                <div class="col-sm-6 col-md-4" *ngFor='let gym of gymData.gymResponseList'>
+                  <!-- Start Product Item -->
+                  <div class="product-item">
+                    <div class="product-thumb">
+                      <a routerLink="./product-detail">
+                        <img src="{{gym.gymPictures[0].pictureUrl}}" alt="Image">
+                      </a>
+                      <div class="product-action">
+                        <a class="btn-theme"  (click)="gymDetails(gym)" >View Details</a>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h4 class="title"><a (click)="gymDetails(gym)">{{gym.gymName}}</a></h4>
+                      <div class="prices">
+                        <span class="price"> &#8377; {{gym.gym1MPrice}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product Item -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="product-btn">
+                    <a class="btn-border mt-10" routerLink="/shop">VIEW ALL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-3 order-1 order-lg-0">
+            <div class="sidebar-area shop-sidebar-area mt-md-90">
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">SEARCH</h3>
+                </div>
+                <div class="widget-body">
+                  <div class="widget-search-box">
+                    <form action="">
+                      <div class="form-input-item">
+                        <label for="search2" class="sr-only">Keywords here</label>
+                        <input type="text" #param  id="search2" placeholder="Keywords here">
+                        <button (click)="searchKeyword(param.value)" class="btn-src">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">CATEGORIES</h3>
+                </div>
+                <div class="widget-body widget-categorie-body">
+                  <div class="widget-categories">
+                    <ul>
+                      <li><a routerLink="/shop">Fitness Ball <span>25</span></a></li>
+                      <li><a routerLink="/shop">Gym Bag<span>52</span></a></li>
+                      <li><a routerLink="/shop">Water Bottle<span>12</span></a></li>
+                      <li><a routerLink="/shop">Workout Tank Top<span>18</span></a></li>
+                      <li><a routerLink="/shop">Skipping Rope<span>45</span></a></li>
+                      <li><a routerLink="/shop">Ab Roller<span>72</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">PRICE FILTER</h3>
+                </div>
+                <div class="widget-body widget-price-filter-body">
+                  <div class="widget-price-filter">
+                    <div class="slider-range" id="slider-range"></div>
+                    <div class="slider-labels">
+                      <div class="caption">
+                        <span id="slider-range-value1"></span>
+                      </div>
+                      <span class="range-separator"> — </span>
+                      <div class="caption">
+                        <span id="slider-range-value2"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">TAGS</h3>
+                </div>
+                <div class="widget-body widget-tags-body">
+                  <div class="widget-tags">
+                    <ul>
+                      <li><a routerLink="/shop">Fitness</a></li>
+                      <li><a routerLink="/shop">Workout</a></li>
+                      <li><a routerLink="/shop">Aerobics</a></li>
+                      <li><a routerLink="/shop">Crossfit</a></li>
+                      <li><a routerLink="/shop">Yoga</a></li>
+                      <li><a routerLink="/shop">Exercise</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item mb-md-0">
+                <div class="widget-content-ads">
+                  <div class="ads-thumb">
+                    <a routerLink="/shop"><img src="assets/img/shop/s1.jpg" alt="Image"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Shop Area Wrapper ==-->
+  </main>

@@ -1,0 +1,429 @@
+<main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page2.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content">
+              <h2 class="title"><span>PRODUCT </span><br>DETAILS</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
+
+    <!--== Start Shop Area ==-->
+    <section class="product-area shop-single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-9 order-0 order-lg-1">
+            <div class="row row-gutter-0">
+              <div class="col-md-6">
+                <div class="single-product-thumb">
+                  <div class="thumb-item">
+                    <a class="lightbox-image" data-fancybox="gallery" href="{{this.gymDaetails.gymPictures[0].pictureUrl}}">
+                      <img width="500" height="270"  src="{{this.gymDaetails.gymPictures[0].pictureUrl}}" alt="Image-HasTech">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single-product-info">
+                  <h4 class="title">{{this.gymDaetails.gymName}}</h4>
+                  <p class="product-desc">{{this.gymDaetails.location}}</p>
+                  <div class="single-product-desc">
+                    <div class="product-stock">
+                      <h5 class="title">Slot: <span>Available</span></h5>
+                    </div>
+                    <div class="product-sku">
+                      <h5 class="title">Timeings : <span>{{this.gymDaetails.timeings}}</span></h5>
+                    </div>
+                    <!-- <div class="product-category">
+                      <h5 class="title">Category:<span>Fitness</span></h5>
+                    </div> -->
+                    <div class="product-tag">
+                      <h5 class="title">Tag:</h5>
+                      <ul>
+                        <li><a href="#/">Fitness</a>,</li>
+                        <li><a href="#/">Gym</a>,</li>
+                        <li><a href="#/">Instrument</a>,</li>
+                        <li><a href="#/">Bodybuilding</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+    <!--== Start Pricing Area Wrapper ==-->
+    <section class="pricing-area pricing-default-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <h2 class="title">CHOOSE YOUR <span>MEMBERSHIP</span></h2>
+              <div class="desc">
+                <p>Gym classes dolor sit amet, consectetur adipiscing elit, sed do eiod tempor <br>didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <!--== Start Pricing Item ==-->
+            <div class="pricing-item mb-sm-50">
+              <div class="pricing-title">
+                <h5>BASIC</h5>
+              </div>
+              <div class="pricing-thumb pricing-thumb-style1">
+                <img src="assets/img/photos/pricing1.png" alt="Image">
+              </div>
+              <div class="pricing-amount">
+                <h2> &#8377; {{this.gymDaetails.gym1MPrice}}</h2>
+                <h3>for 1 month</h3>
+              </div>
+              <div class="pricing-content">
+                <ul class="pricing-list" *ngFor='let detail of p1Deatils'>
+                  <li>{{detail}}</li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <div class="pricing-footer-inner">
+                  <a (click)="purchase(1)" class="btn btn-theme">JOIN TODAY</a>
+                </div>
+              </div>
+            </div>
+            <!--== End Pricing Item ==-->
+          </div>
+          <div class="col-md-4">
+            <!--== Start Pricing Item ==-->
+            <div class="pricing-item mb-sm-50">
+              <div class="pricing-title">
+                <h5>SILVER</h5>
+              </div>
+              <div class="pricing-thumb pricing-thumb-style2">
+                <img src="assets/img/photos/pricing2.png" alt="Image">
+              </div>
+              <div class="pricing-amount">
+                <h2> &#8377; {{this.gymDaetails.gym2MPrice}}</h2>
+                <h3>for 3 month</h3>
+              </div>
+              <div class="pricing-content">
+
+                <ul class="pricing-list" *ngFor='let detail of p2Deatils'>
+                  <li>{{detail}}</li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <div class="pricing-footer-inner">
+                  <a (click)="purchase(7)" class="btn btn-theme">JOIN TODAY</a>
+                </div>
+              </div>
+            </div>
+            <!--== End Pricing Item ==-->
+          </div>
+          <div class="col-md-4">
+            <!--== Start Pricing Item ==-->
+            <div class="pricing-item">
+              <div class="pricing-title">
+                <h5>GOLD</h5>
+              </div>
+              <div class="pricing-thumb pricing-thumb-style3">
+                <img src="assets/img/photos/pricing3.png" alt="Image">
+              </div>
+              <div class="pricing-amount">
+                <h2> &#8377; {{this.gymDaetails.gym3MPrice}}</h2>
+                <h3>for 7 month</h3>
+              </div>
+              <div class="pricing-content">
+
+                <ul class="pricing-list" *ngFor='let detail of p3Deatils'>
+                  <li>{{detail}}</li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <div class="pricing-footer-inner">
+                  <a (click)="purchase(15)" class="btn btn-theme">JOIN TODAY</a>
+                </div>
+              </div>
+            </div>
+            <!--== End Pricing Item ==-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Pricing Area Wrapper ==-->
+
+
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="product-description-review">
+                  <ul class="nav nav-tabs product-description-tab-menu" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="product-desc-tab" data-bs-toggle="tab" data-bs-target="#productDesc" type="button" role="tab" aria-controls="productDesc" aria-selected="true">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="product-aditional-tab" data-bs-toggle="tab" data-bs-target="#commentProduct" type="button" role="tab" aria-selected="false">Aditional Info</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="product-custom-tab" data-bs-toggle="tab" data-bs-target="#productCustom" type="button" role="tab" aria-controls="productCustom" aria-selected="false">Equipments</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="product-review-tab" data-bs-toggle="tab" data-bs-target="#productReview" type="button" role="tab" aria-controls="productReview" aria-selected="false">Reviews (3)</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content product-description-tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="productDesc" role="tabpanel" aria-labelledby="product-desc-tab">
+                      <div class="product-desc">
+                          {{this.gymDaetails.gymDescription}}
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="commentProduct" role="tabpanel" aria-labelledby="product-aditional-tab">
+                      <div class="product-aditional-info product-shipping-policy">
+                        <div class="section-title">
+                          <h2 class="title">Aditional Info</h2>
+                          <p>{{this.gymDaetails.additionalInfo}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="productCustom" role="tabpanel" aria-labelledby="product-custom-tab">
+                      <div class="product-shipping-policy">
+                        <div class="section-title">
+                          <h2 class="title">Equipment available at the gym</h2>
+                        </div>
+                        <ul class="shipping-policy-list"   *ngFor='let equipment of this.gymDaetails.gymEquipments'  >
+                          <li>{{equipment.count}} units of {{equipment.equipmentName}}</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="productReview" role="tabpanel" aria-labelledby="product-review-tab" >
+                      <div class="product-review" *ngIf="commentData.comments[0]!=undefined">
+                        <div class="review-header" >
+                          <h4 class="title">Customer Reviews</h4>
+                          <div class="review-info" *ngIf="commentData.comments[0]!=undefined">
+                            <ul class="review-rating">
+                              <li *ngFor='let star of commentData.comments[0].starac'><i class="fa fa-star"></i></li>
+                              <li *ngFor='let star of commentData.comments[0].starauc'><i class="fa fa-star-o"></i></li>
+                            </ul>
+                    <span class="review-caption">Based on {{commentData.comments[0].totalRating}} review</span>
+                            <span class="review-write-btn">Write a review</span>
+                          </div>
+                        </div>
+                        <div class="product-review-form">
+                          <h4 class="title">Write a review</h4>
+                          <form action="#" method="post">
+                            <div class="review-form-content">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label for="reviewFormName">Name</label>
+                                    <input class="form-control" id="reviewFormName" type="text" placeholder="Enter your name" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label for="reviewFormEmail">Email</label>
+                                    <input class="form-control" id="reviewFormEmail" type="email" placeholder="john.smith@example.com" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="rating">
+                                    <span class="rating-title">Rating</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label for="reviewReviewTitle">Review Title</label>
+                                    <input class="form-control" id="reviewReviewTitle" type="text" placeholder="Give your review a title" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label for="reviewFormTextarea">Body of Review <span>(1500)</span></label>
+                                    <textarea class="form-control textarea" id="reviewFormTextarea" name="comment" rows="7" placeholder="Write your comments here" required=""></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group pull-right">
+                                    <button class="btn btn-theme" type="submit">Submit Review</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <span *ngIf="commentData.comments!=undefined">
+                        <div class="review-content" *ngFor='let comment of commentData.comments' >
+                          <div class="review-item">
+                            <ul class="review-rating">
+                              <li *ngFor='let star of comment.starc'><i class="fa fa-star"></i></li>
+                              <li *ngFor='let star of comment.staruc'><i class="fa fa-star-o"></i></li>
+                            </ul>
+                            <h4 class="title">{{comment.name}}</h4>
+                            <h5 class="review-date"><span>{{comment.name}}</span> on <span>{{comment.date | date }}</span></h5>
+                            <p>{{comment.message}}</p>
+                            <a class="review-report" href="#/">Report as Inappropriate</a>
+                          </div>
+                        </div>
+                        </span>
+                      </div>
+                      <br>
+                      <div style="text-align: center;" *ngIf="commentData.comments[0]!=undefined">
+                      <button *ngIf="commentData.comments[0]!=undefined" id="submit" type="button" style="float: center;"> << Prev</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button *ngIf="commentData.comments[0]!=undefined" id="submit" type="button" style="float: center;">Next >> </button> 
+                    </div>
+                      <br>
+                      <div class="review-header">
+                        <h4 class="title">Add your review</h4>
+                        <div class="review-info">
+                          <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index" style="display: inline-block;margin-bottom:0px;"> 
+                                    <li (click)="countStar(star)" id="{{'starId'+i}}" [ngClass]="{'selected': (star <= selectedValue)}" 
+                                     (mouseover)="addClass(star)" (mouseout)="removeClass(star)"> ★
+                                    </li>
+                                </ul>
+                                <br>
+                                <textarea [(ngModel)]="comment" rows="4" cols="50"></textarea>
+                                <br> 
+                                <button id="submit" type="button" style="float: right;" (click)="saveComments()">Submit</button> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="product-area">
+                  <div class="section-title">
+                    <h2 class="title">Trainer</h2>
+                  </div>
+                  <div class="row" >
+                    <div class="col-sm-4">
+                      <!-- Start Product Item -->
+                      <div class="product-item mb-xs-30">
+                        <div class="product-thumb" *ngFor='let trainer of trainerDetail' >
+                          <a >
+                            <img src="{{trainer.trainerPicture}}" alt="Image">
+                          </a>
+                          <div class="ribbons">
+                            <span class="ribbon ribbon-hot">{{trainer.rating}}</span>
+                          </div>
+                          <div class="product-action">
+                            <a class="btn-theme" >View Detail</a>
+                          </div>
+
+
+                          <div class="product-info">
+                            <h4 class="title"><a routerLink="/shop/product-detail">{{trainer.name}}</a></h4>
+                            <div class="prices">
+                              <span class="price">{{trainer.trainerType}}</span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <!-- End Product Item -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-3 order-1 order-lg-0">
+            <div class="sidebar-area shop-sidebar-area mt-md-90">
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">SEARCH</h3>
+                </div>
+                <div class="widget-body">
+                  <div class="widget-search-box">
+                    <form action="#" method="post">
+                      <div class="form-input-item">
+                        <label for="search2" class="sr-only">Keywords here</label>
+                        <input type="text" id="search2" placeholder="Keywords here">
+                        <button type="submit" class="btn-src">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">CATEGORIES</h3>
+                </div>
+                <div class="widget-body widget-categorie-body">
+                  <div class="widget-categories">
+                    <ul>
+                      <li><a routerLink="/blogs">Fitness Ball <span>25</span></a></li>
+                      <li><a routerLink="/blogs">Gym Bag<span>52</span></a></li>
+                      <li><a routerLink="/blogs">Water Bottle<span>12</span></a></li>
+                      <li><a routerLink="/blogs">Workout Tank Top<span>18</span></a></li>
+                      <li><a routerLink="/blogs">Skipping Rope<span>45</span></a></li>
+                      <li><a routerLink="/blogs">Ab Roller<span>72</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">PRICE FILTER</h3>
+                </div>
+                <div class="widget-body widget-price-filter-body">
+                  <div class="widget-price-filter">
+                    <div class="slider-range" id="slider-range"></div>
+                    <div class="slider-labels">
+                      <div class="caption">
+                        <span id="slider-range-value1"></span>
+                      </div>
+                      <span class="range-separator"> — </span>
+                      <div class="caption">
+                        <span id="slider-range-value2"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-title">
+                  <h3 class="title">TAGS</h3>
+                </div>
+                <div class="widget-body widget-tags-body">
+                  <div class="widget-tags">
+                    <ul>
+                      <li><a routerLink="/shop">Fitness</a></li>
+                      <li><a routerLink="/shop">Workout</a></li>
+                      <li><a routerLink="/shop">Aerobics</a></li>
+                      <li><a routerLink="/shop">Crossfit</a></li>
+                      <li><a routerLink="/shop">Yoga</a></li>
+                      <li><a routerLink="/shop">Exercise</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-item">
+                <div class="widget-content-ads">
+                  <div class="ads-thumb">
+                    <a routerLink="/shop/product-detail"><img src="assets/img/shop/s1.jpg" alt="Image"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Shop Area ==-->
+  </main>

@@ -1,0 +1,66 @@
+<p>Book slot on : </p>
+
+<div class="ngx-timepicker-field-example" style="width: 200px;">
+    <ngx-timepicker-field [controlOnly]="true" [defaultTime]="'11:00 am'" [minutesGap]="5" [min]="'03:15 am'" [max]="'06:18 pm'" #picker></ngx-timepicker-field>
+<br>
+</div>
+<div *ngIf="doTransfer">
+<br><br><br>
+<input type="text"  size="50" class="gymForm" placeholder="Transfer To PhoneNo/Email" [(ngModel)]="transferNo" >
+<br>
+<input type="text"  size="50" class="gymForm" placeholder="No Of Classes" [(ngModel)]="transferNoOfClasses" >
+<br>
+<button (click)="transfer()" value="Transfer">Transfer</button>
+<br><br>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Gym Id</th>
+            <th>Gym Name</th>
+            <th>Payment Date</th>
+            <th>Basic Price</th>
+            <th>Discount</th>
+            <th>Coupon Code</th>
+            <th>Tax</th>
+            <th>Final Price</th>
+            <th>Slot Id</th>
+            <th>Months</th>
+            <th>Slots Use Months</th>
+            <th>Months Used</th>
+            <th>Months Left</th>
+            <th>ACtion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let slot of slotInfo.gymSlotPurchaseList">
+            <th>{{ slot.customerId }}</th>
+            <td> </td>
+            <td>{{ slot.gymId }}</td>
+            <td> </td>
+            <td>{{ slot.paymentDoneTime * 1000 | date }} </td>
+            <td>{{ slot.priceBeforeDiscountAndTax }}</td>
+            <td>{{ slot.discount }}</td>
+            <td>{{ slot.couponCode }}</td>
+            <td>{{ slot.tax }}</td>
+            <td>{{ slot.priceAfterDisAndTax }}</td>
+            <td>{{ slot.slotId }}</td>
+            <td>{{ slot.slots }}</td>
+            <td>{{ slot.slotsNoOfMonths }}</td>
+            <td>{{ slot.slotsUsed }}</td>
+            <td>{{ slot.slots -  slot.slotsUsed }}</td>
+            <td>
+                <button (click)="checkTime(picker,slot.gymId,slot.slotId)" value="Schedule class">Schedule Class</button>
+                <button (click)="markAttendance(slot.slotId,slot.gymId,slot.customerId)" value="Mark Attendance">Mark Attendance</button>
+                <button (click)="transferClass(slot.slotId,slot.gymId,slot.customerId)" value="Transfer Class">Transfer Class</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
